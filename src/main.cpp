@@ -1,6 +1,17 @@
-#include "PrintHello.hpp"
+#include <iostream>
+
+#include "Gra.hpp"
+#include "Firma.hpp"
+#include "Pracownicy.hpp"
 
 int main()
 {
-    printHello();
+    Gra gra1{};
+
+    gra1.wylistuj_polecenia();
+    
+    while(gra1.get_stan()==true)
+    {
+        gra1.akcja_gracza();
+    }
 }
